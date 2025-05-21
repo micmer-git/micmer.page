@@ -2,7 +2,7 @@
   "name": "strava-diary",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://micmer.github.io/micmer.page",
+  "homepage": "https://micmer-git.github.io/micmer.page",
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@testing-library/jest-dom": "^5.17.0",
