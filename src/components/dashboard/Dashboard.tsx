@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
 import { mockStravaActivities, calculateTotalDistance, calculateTotalTime, calculateTotalElevation, calculateTotalCalories, getUniqueCountries, getSocialActivitiesPercentage } from '../../data/mockData';
-import { mockYearlyStats, getAllYears, getYearlyStats, getTotalStats, formatDistance, formatTime, formatElevation, formatCalories } from '../../data/yearlyData';
+
 
 interface StatCardProps {
   icon: string;

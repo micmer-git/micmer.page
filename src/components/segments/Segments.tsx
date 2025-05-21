@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Segments.css';
-import { mockSegments, formatTime, formatPace, getSegmentsByType, getSegmentsBySport, getTotalAttempts, getTotalClimbingElevation } from '../../data/segmentData';
+import { mockSegments, formatTime, formatPace, getSegmentsByType, getSegmentsBySport, getTotalAttempts, getTotalClimbingElevation } from './segmentData';
 
 const Segments: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'Run' | 'Ride'>('all');
