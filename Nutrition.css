@@ -1,0 +1,400 @@
+.nutrition-dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nutrition-section {
+  margin-bottom: 3rem;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #495057;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.nutrition-date {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.nutrition-summary {
+  margin-bottom: 2rem;
+}
+
+.calorie-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.calorie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calorie-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #212529;
+}
+
+.tss-indicator {
+  background-color: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.calorie-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calorie-consumed,
+.calorie-burned,
+.calorie-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calorie-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.calorie-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.calorie-separator {
+  font-size: 1.5rem;
+  color: #adb5bd;
+  margin: 0 0.5rem;
+}
+
+.calorie-balance.negative .calorie-value {
+  color: #dc3545;
+}
+
+.calorie-balance.positive .calorie-value {
+  color: #28a745;
+}
+
+.subsection-title {
+  font-size: 1.3rem;
+  color: #495057;
+  margin: 2rem 0 1rem;
+}
+
+.nutrients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.nutrient-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.nutrient-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+  color: #212529;
+}
+
+.nutrient-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.nutrient-unit {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 0.25rem;
+  color: #6c757d;
+}
+
+.nutrient-progress {
+  margin-top: 0.75rem;
+}
+
+.nutrient-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.nutrient-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.nutrient-percentage {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: right;
+}
+
+.carb-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.carb-chart {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.chart-placeholder {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ced4da;
+  border-radius: 4px;
+}
+
+.chart-placeholder.tall {
+  height: 300px;
+}
+
+.chart-note {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legend-text {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.carb-timing {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.carb-timing h4 {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  color: #212529;
+}
+
+.timing-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.timing-item:last-child {
+  border-bottom: none;
+}
+
+.timing-label {
+  color: #495057;
+}
+
+.timing-value {
+  font-weight: 500;
+  color: #212529;
+}
+
+.micro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.hydration-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.hydration-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hydration-icon {
+  font-size: 2.5rem;
+  margin-right: 1.5rem;
+}
+
+.hydration-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.hydration-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+.hydration-unit {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 0.25rem;
+  color: #6c757d;
+}
+
+.hydration-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.hydration-progress {
+  margin-top: 0.5rem;
+}
+
+.hydration-bar {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.hydration-fill {
+  height: 100%;
+  background-color: #03a9f4;
+  border-radius: 5px;
+}
+
+.hydration-percentage {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: right;
+}
+
+.tss-chart {
+  margin: 1.5rem 0;
+}
+
+.chart-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.tss-insights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.insight-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.insight-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+  color: #212529;
+}
+
+.insight-card p {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.insight-card ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.insight-card li {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .nutrients-grid,
+  .micro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .carb-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .tss-insights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .nutrition-dashboard {
+    padding: 1rem;
+  }
+  
+  .nutrients-grid,
+  .micro-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calorie-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .calorie-separator {
+    transform: rotate(90deg);
+  }
+}
