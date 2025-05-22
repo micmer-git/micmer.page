@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strava Stats Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                Strava Stats Dashboard
+            </div>
+            <div class="user-info">
+                {% if athlete %}
+                <span>{{ athlete.firstname }} {{ athlete.lastname }}</span>
+                <a href="{{ url_for('auth.logout') }}" class="btn btn-small">Logout</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="loading" id="loading-section">
+            <div class="spinner"></div>
+            <p>Loading your Strava data...</p>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+
+        <section class="dashboard" id="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card fade-in delay-1">
+                    <h3>Total Distance</h3>
+                    <div class="stat-value" id="total-distance">0</div>
+                    <div class="stat-label">kilometers</div>
+                </div>
+                <div class="stat-card fade-in delay-2">
+                    <h3>Total Moving Time</h3>
+                    <div class="stat-value" id="total-moving-time">0</div>
+                    <div class="stat-label">hours</div>
+                </div>
+                <div class="stat-card fade-in delay-3">
+                    <h3>Total Elevation Gain</h3>
+                    <div class="stat-value" id="total-elevation">0</div>
+                    <div class="stat-label">meters</div>
+                </div>
+                <div class="stat-card fade-in delay-4">
+                    <h3>Total Calories</h3>
+                    <div class="stat-value" id="total-calories">0</div>
+                    <div class="stat-label">kcal</div>
+                </div>
+            </div>
+
+            <div class="chart-container fade-in delay-1">
+                <div class="chart-header">
+                    <h3 class="chart-title">Yearly Activity Summary</h3>
+                    <div class="chart-filters">
+                        <button class="filter-btn active" data-type="all">All</button>
+                        <button class="filter-btn" data-type="run">Running</button>
+                        <button class="filter-btn" data-type="ride">Cycling</button>
+                    </div>
+                </div>
+                <canvas id="yearly-chart" height="300"></canvas>
+            </div>
+
+            <div class="chart-container fade-in delay-2">
+                <div class="chart-header">
+                    <h3 class="chart-title">Activity Distribution</h3>
+                </div>
+                <canvas id="activity-distribution" height="300"></canvas>
+            </div>
+
+            <div class="insights-section fade-in delay-3">
+                <div class="insights-header">
+                    <h3 class="insights-title">Data Insights</h3>
+                    <p class="insights-subtitle">Interesting patterns and trends from your activities</p>
+                </div>
+                <div class="insights-grid" id="insights-grid">
+                    <!-- Insights will be dynamically added here -->
+                </div>
+            </div>
+
+            <div class="records-section fade-in delay-4">
+                <h3 class="records-title">Personal Records</h3>
+                <div class="records-grid" id="records-grid">
+                    <!-- Records will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-text">
+                &copy; 2025 Strava Stats Dashboard
+            </div>
+            <div class="footer-text">
+                Powered by Strava API
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
